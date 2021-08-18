@@ -86,15 +86,19 @@
         const changeUrls = function () {
           //
           document.getElementsByTagName("a")
-          changeLink.href = "https://www.google.com/" /* = 'href="https://www.google.com"' */
+          changeLink.href = "https://www.google.com/" 
         };
   
         /* EXERCISE 5
-         Write a function for adding a new item in the second list.
+         Write a function for adding a new item in the second list.    ?
          */
-  
+        const secondItem = document.querySelector("ul li")
         const addToTheSecond = function (content) {
           //
+            document.getElementById("secondList")
+            let myListItem = document.createElement('li')
+            myListItem.innerText = "4th"
+            document.querySelector('ul li').appendChild(myListItem)
         };
   
         /* EXERCISE 6
