@@ -12,6 +12,7 @@
         <h1>This is the title of the page</h1>
         <h2>This is the subtitle of the page</h2>
       </header>
+      
   
       <main>
         <hr />
@@ -61,25 +62,31 @@
         /* EXERCISE 2
         Write a function for changing the class of the title of the page in "myHeading".
         */
-  
+        const addingClassToTitle = document.querySelector("h1")
         const addClassToTitle = function () {
           //
+          document.getElementsByTagName("h1")
+          addingClassToTitle.classList.toggle("myHeading")
         };
   
         /* EXERCISE 3
         Write a function for changing the text of only the p which are children of a div.
         */
-  
+        const changingParagraph = document.querySelector("div p")
         const changePcontent = function () {
           //
+          document.getElementsByTagName("p")
+          changingParagraph.innerHTML = "Children of a div"
         };
   
         /* EXERCISE 4
-        Write a function for changing the destination of every link to https://www.google.com
+        Write a function for changing the destination of every link to https://www.google.com      ?
         */
-  
+        const changeLink = document.querySelector("a")
         const changeUrls = function () {
           //
+          document.getElementsByTagName("a")
+          changeLink.outerHTML = 'href="https://www.google.com"'
         };
   
         /* EXERCISE 5
@@ -143,7 +150,7 @@
   
         window.onload = function () {
           //
-          alert("Welcome to the page")
+          /* alert("Welcome to the page") */
         };
   
         /* EXERCISE 13
