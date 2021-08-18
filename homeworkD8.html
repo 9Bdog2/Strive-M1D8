@@ -120,15 +120,19 @@
         const firstUlDisappear = function () {
           //
           document.getElementById("firstList")
-          firstUlDelete.delete 
+          firstUlDelete.remove
         };
   
         /* EXERCISE 8
         Write a function for making the background of every UL green.
         */
-  
+        
         const paintItGreen = function () {
           //
+          for (let node of document.querySelectorAll("ul")){
+          document.getElementsByTagName("ul")
+          node.style.backgroundColor = "green"
+          }
         };
   
         /* EXERCISE 9
