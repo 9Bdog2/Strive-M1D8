@@ -40,6 +40,7 @@
             type="text"
             id="input-field"
             placeholder="input field for the exercise"
+            oninput="inputFieldListener(event)"
           />
         </div>
       </main>
@@ -156,7 +157,10 @@
         */
   
         const inputField = document.getElementById("input-field");
-        // ...
+        const inputFieldListener = (eventHappening) => {
+            console.log(eventHappening.target.value)
+        }
+        
   
         /* EXERCISE 12
         Create a new welcome alert message when the page successfully loads.
@@ -164,7 +168,7 @@
   
         window.onload = function () {
           //
-          /* alert("Welcome to the page") */
+           alert("Welcome to the page") 
         };
   
         /* EXERCISE 13
