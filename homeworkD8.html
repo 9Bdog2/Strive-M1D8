@@ -91,7 +91,7 @@
         };
   
         /* EXERCISE 5
-         Write a function for adding a new item in the second list.    ?
+         Write a function for adding a new item in the second list.    
          */
         const secondItem = document.querySelector("ul li")
         const addToTheSecond = function (content) {
@@ -99,11 +99,11 @@
             document.getElementById("secondList")
             let myListItem = document.createElement('li')
             myListItem.innerText = "4th"
-            document.querySelector('ul li').appendChild(myListItem)
+            document.querySelector('#secondList').append(myListItem)
         };
   
         /* EXERCISE 6
-        Write a function for adding a second paragraph to the div.    ?
+        Write a function for adding a second paragraph to the div.    
         */
         const secondParagraphInDiv = document.querySelector("div")
         const addParagraph = function (content) {
@@ -111,7 +111,7 @@
           document.getElementsByTagName("div")
           let myParagraph = document.createElement("p")
           myParagraph.innerText = "A new paragraph"
-          documen.querySelector("div").append(myParagraph)
+          document.querySelector("div").append(myParagraph)
         };
   
         /* EXERCISE 7
@@ -121,7 +121,7 @@
         const firstUlDisappear = function () {
           //
           document.getElementById("firstList")
-          firstUlDelete.remove
+          firstUlDelete.style.display = "none"
         };
   
         /* EXERCISE 8
@@ -142,16 +142,20 @@
   
         const makeItClickable = function () {
           //
+          let header = document.getElementsByTagName("h1")
+          header.addEventListener("click", () => {header.classList.toggle = "myHeading"})
         };
-  
+        
         /* EXERCISE 10
         Change the footer text with something else when the user clicks on it.
         */
   
         const changeFooterText = function () {
           //
+          let footer = document.getElementsByTagName("footer")[0]
+          footer.addEventListener("click", () => {footer.innerText = "fake text"})
         };
-  
+        changeFooterText()
         /* EXERCISE 11
         Attach an event listener to the input field in the page for console logging its value just after any keystroke.
         */
