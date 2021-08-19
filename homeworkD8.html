@@ -117,11 +117,13 @@
         /* EXERCISE 7
         Write a function for making the first UL disappear.      ?
         */
-        const firstUlDelete = document.querySelector("ul")
+        // const firstUlDelete = document.querySelector("ul")
         const firstUlDisappear = function () {
           //
-          document.getElementById("firstList")
-          firstUlDelete.style.display = "none"
+         /*  document.getElementById("firstList")
+          firstUlDelete.style.display = "none" */
+          const ul = document.querySelectorAll("ul")[0];
+          ul.remove();
         };
   
         /* EXERCISE 8
