@@ -140,15 +140,18 @@
         Make the heading of the page change color every time the user clicks on it.
         */
   
-        const makeItClickable = function () {
+       /*  const makeItClickable = function (event) {
           //
-          /* let header = document.getElementsByTagName("h1")
-          header.addEventListener("click", () => {header.classList.toggle = "myHeading"}) */
-          const clickTitle = document.querySelector("h1");
-          clickTitle.addEventListener("click", function (e) {
+           let header = document.getElementsByTagName("h1")
+          header.addEventListener("click", () => {header.classList.toggle = "myHeading"}) 
+        }; */
+        const makeItClickable = function () {
+          const title = document.querySelector("h1");
+          title.addEventListener("click", function (e) {
             e.target.classList.toggle("myHeading");
-          }
-        };
+          });
+      };
+     
       
       makeItClickable();
         
@@ -158,8 +161,12 @@
   
         const changeFooterText = function () {
           //
-          let footer = document.getElementsByTagName("footer")[0]
-          footer.addEventListener("click", () => {footer.innerText = "fake text"})
+          /* let footer = document.getElementsByTagName("footer")[0]
+          footer.addEventListener("click", () => {footer.innerText = "fake text"}) */
+          const footer = document.querySelector("footer");
+          footer.addEventListener("click", function (e) {
+            e.target.innerText = "text changed";
+          })
         };
         changeFooterText()
         /* EXERCISE 11
