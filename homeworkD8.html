@@ -142,9 +142,15 @@
   
         const makeItClickable = function () {
           //
-          let header = document.getElementsByTagName("h1")
-          header.addEventListener("click", () => {header.classList.toggle = "myHeading"})
+          /* let header = document.getElementsByTagName("h1")
+          header.addEventListener("click", () => {header.classList.toggle = "myHeading"}) */
+          const clickTitle = document.querySelector("h1");
+          clickTitle.addEventListener("click", function (e) {
+            e.target.classList.toggle("myHeading");
+          }
         };
+      
+      makeItClickable();
         
         /* EXERCISE 10
         Change the footer text with something else when the user clicks on it.
